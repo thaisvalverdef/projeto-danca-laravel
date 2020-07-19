@@ -40,7 +40,7 @@
         <div class="card-body">
           <h5 class="card-title">Título do card</h5>
           <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-          <a href="#" class="btn" class="saiba">Saiba mais</a>
+          <a href="/perfil" class="btn" class="saiba">Saiba mais</a>
   
         </div>
       </div>

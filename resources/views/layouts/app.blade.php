@@ -94,14 +94,14 @@
                                 <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">Como funciona</a>
+                                <a class="nav-link" href="/como-funciona">Como funciona</a>
                             </li>
                             
                             <li class="navbar-nav ml-auto">
                            <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#" data-toggle="dropdown" id="navDrop">Modalidades</a>
+                                    <a class="nav-link" href="/modalidades" data-toggle="dropdown" id="navDrop">Modalidades</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-                                <a class="dropdown-item" href="#">Ballet</a>
+                                <a class="dropdown-item" href="/modalidades">Ballet</a>
                                 <a class="dropdown-item" href="#">Contemporâneo</a>
                                 <a class="dropdown-item" href="#">Dança de Salão</a>
                                 <a class="dropdown-item" href="#">Dança do Ventre</a>
