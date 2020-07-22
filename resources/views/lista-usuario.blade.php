@@ -4,13 +4,17 @@
     <main class="container" id="containerlista">
         <article class="row" style="padding-bottom:300px">
             <section class="col-12 mx-auto my-5 py-5" id="usuariosTb">
-                {{-- <h3 class="col-12 text-center my-2"><?= $tituloPagina ?></h3> --}}
+                <h3 class="col-12 text-center my-2">Lista de Usuário</h3>
                 <table class="table my-5">
                     <thead class="thead-light" style="text-align:center">
                         <tr>
                             <th scope="col">Nome</th>
                             <th scope="col">Sobrenome</th>
                             <th scope="col">E-mail</th>
+                            <th scope="col">Apresentação</th>
+                            <th scope="col">Metodologia</th>
+                            <th scope="col">Níveis</th>
+                            <th scope="col">Imagem</th>
                             <th scope="col">Editar</th>
                             <th scope="col">Excluir</th>
                         </tr>
@@ -19,6 +23,10 @@
 
                         <tr style="text-align:center">
                             <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td>
