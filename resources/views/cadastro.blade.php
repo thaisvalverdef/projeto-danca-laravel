@@ -8,7 +8,7 @@
   </div>
   
   <div class="container">
-    <form>
+    <form method="POST" action="/professor/add" enctype="multipart/form-data">
       <div class="form-group col-sm-9">
         <label for="nome">Nome</label>
         <input type="text" class="form-control" id="nome">

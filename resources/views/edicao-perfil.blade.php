@@ -10,11 +10,15 @@
   </header>
 
 <div class="container" id="containeredicao">
+                {{-- falta arrumar todos os campos igual campo nome --}}
 
-    <form>
+    <form method="POST" action="/edicao-perfil/{{$professor->id}}" enctype="multipart/form-data">
+        @csrf
+        {{ method_field('PUT') }}
         <div class="form-group col-sm-9">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome">
+            <input type="text" name="nome" value="{{ $professor->nome }}" class="form-control {{$errors->has('nome') ? ' is-invalid':''}}" id="nome">
+            <div class="invalid-feedback">{{ $errors->first('nome') }}</div>       
         </div>
         <div class="form-group col-sm-9">
             <label for="nome">Sobrenome</label>

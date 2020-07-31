@@ -17,37 +17,22 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/como-funciona', function () {
-    return view('como-funciona');
-});
+//Listando professores
+Route::get('/lista-usuario', 'ProfessorController@index');
 
-Route::get('/cadastro', function () {
-    return view('cadastro');
-});
+//Criando perfil
+Route::get('/cadastro', 'ProfessorController@add');
+Route::post('/cadastro', 'ProfessorController@create');
 
-Route::get('/modalidades', function () {
-    return view('modalidades');
-});
+//Alterando cards
+Route::get('/edicao-perfil/{id}', 'ProfessorController@edit');
+Route::put('/edicao-perfil/{id}', 'ProfessorController@update');
 
-Route::get('/edicao-perfil', function () {
-    return view('edicao-perfil');
-});
+//Deletando cards
+Route::delete('/professor/remove/{id}', 'ProfessorController@delete');
 
-Route::get('/perfil', function () {
-    return view('perfil');
-});
-
-Route::get('/lista-usuario', function () {
-    return view('lista-usuario');
-});
-
-Route::get('/lista-categorias', function () {
-    return view('lista-categorias');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//Pesquisando cards - filtro de busca
+Route::get('/professor/search', 'ProfessorController@search');
 
 Auth::routes();
 
