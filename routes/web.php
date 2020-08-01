@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
+
+});
+
+Route::get('/perfil', function () {
+    return view('perfil');
 });
 
 //Listando professores
@@ -35,5 +40,5 @@ Route::delete('/professor/remove/{id}', 'ProfessorController@delete');
 Route::get('/professor/search', 'ProfessorController@search');
 
 Auth::routes();
-
+Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
