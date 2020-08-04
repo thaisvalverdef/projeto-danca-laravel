@@ -30,7 +30,6 @@
 
             <a class="navbar-brand" href="">
                 <img src="{{asset("img/logo_danca.png") }}" width="100" height="100">
-
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,20 +39,19 @@
 
                 <ul class="navbar-nav ml-auto">
 
-
                     <li class="nav-item">
 
-                        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Como funciona</a>
+                        <a class="nav-link" href="/como-funciona">Como funciona</a>
                     </li>
 
                     <li class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" data-toggle="dropdown" id="navDrop">Modalidades</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Ballet</a>
+                            <a class="dropdown-item" href="/modalidades">Ballet</a>
                             <a class="dropdown-item" href="#">Contemporâneo</a>
                             <a class="dropdown-item" href="#">Dança de Salão</a>
                             <a class="dropdown-item" href="#">Dança do Ventre</a>
@@ -148,7 +146,6 @@
                                     </div>
                                     <button type="button" class="btn" data-dismiss="modal">Fechar</button>
                                 </div>
-
                             </div>
 
 
@@ -166,7 +163,7 @@
                     <h5>Você dá aula de dança on-line?</h5>
                 </li>
                 <li class="list-inline-item">
-                    <a href="#!" class="btn" style="margin-bottom:15px;">Cadastre-se!</a>
+                    <a href="/register" class="btn" style="margin-bottom:15px;">Cadastre-se!</a>
                 </li>
             </ul>
         </div>

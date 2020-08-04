@@ -15,12 +15,36 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('index');
+});
 
+Route::get('/como-funciona', function () {
+    return view('como-funciona');
+});
+
+Route::get('/cadastro', function () {
+    return view('cadastro');
+});
+
+Route::get('/modalidades', function () {
+    return view('modalidades');
+});
+
+Route::get('/edicao-perfil', function () {
+    return view('edicao-perfil');
 });
 
 Route::get('/perfil', function () {
     return view('perfil');
 });
+
+Route::get('/lista-usuario', function () {
+    return view('lista-usuario');
+});
+
+Route::get('/lista-categorias', function () {
+    return view('lista-categorias');
+});
+
 
 //Listando professores
 Route::get('/lista-usuario', 'ProfessorController@index');
