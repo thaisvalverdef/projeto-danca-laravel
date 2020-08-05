@@ -75,11 +75,11 @@
             </section>
 
             </br></br></br>
-            <div class="row">
+         
                 @if (Session::has('menssagem_rapida'))
-                    <div class"alert alert-success>{{ Session::get('menssagem_rapida')}}</div>
+                    <div class=alert-success>{{ Session::get('menssagem_rapida')}}</div>
                 @endif
-                <form method="post" action="{{ route('contact.store') }}">
+                <form method="post" action="{{ route('perfil.store') }}">
                     {{ csrf_field() }}
                     <div class="form-row">
                         <h5 class="text-center pt-2 pb-0"> Entre em contato com o Professor!</h5>
@@ -88,7 +88,7 @@
                 <div class="form-group col-md-10">
                     <label>Nome Completo</label>
                     <input type="text" class="form-control" name="nome" placeholder="Preencha seu nome">
-                    @if ($erros->has('name'))
+                    @if ($errors->has('name'))
                         <small class="form-text invalid-feedback">{{ $errors->first('name')}} </small>
                     @endif
                 </div>
@@ -96,7 +96,7 @@
                 <div class="form-group col-md-10">
                     <label>Email</label>
                     <input type="text" class="form-control" name="email"  placeholder="name@example.com">
-                    @if ($erros->has('email'))
+                    @if ($errors->has('email'))
                         <small class="form-text invalid-feedback">{{ $errors->first('email')}} </small>
                     @endif
                 </div>
@@ -104,7 +104,7 @@
                 <div class="form-group col-md-10">
                     <label>Mensagem</label>
                      <textarea class="form-control" name="message" rows="7"></textarea>
-                     @if ($erros->has('message'))
+                     @if ($errors->has('message'))
                         <small class="form-text invalid-feedback">{{ $errors->first('message')}} </small>
                     @endif
                 </div>

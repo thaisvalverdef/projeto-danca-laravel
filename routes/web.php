@@ -49,5 +49,5 @@ Route::get('/perfil', [
 ]);
 Route::post('/perfil', [
     'uses' => 'ContactMessageController@store',
-    'as' => 'contact.store'
+    'as' => 'perfil.store'
 ]);
