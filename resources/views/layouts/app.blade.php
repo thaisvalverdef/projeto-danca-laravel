@@ -26,7 +26,7 @@
 
 <body>
     <header>
-        <nav class="navbar text-primary navbar-expand-lg navbar-light">
+        <nav class="navbar text-primary navbar-expand-lg navbar-light"> 
 
             <a class="navbar-brand" href="">
                 <img src="{{asset("img/logo_danca.png") }}" width="100" height="100">
@@ -67,6 +67,9 @@
                     @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+
+                       
+
                     </li>
                     @if (Route::has('register'))
                     <li class="nav-item">
