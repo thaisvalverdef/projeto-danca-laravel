@@ -11,8 +11,9 @@
                             <th scope="col">Nome</th>
                             <th scope="col">Sobrenome</th>
                             <th scope="col">E-mail</th>
+                            <th scope="col">Modalidade</th>
                             <th scope="col">Apresentação</th>
-                            <th scope="col">Metodologia</th>
+                            <th scope="col">Plataforma</th>
                             <th scope="col">Níveis</th>
                             <th scope="col">Imagem</th>
                             <th scope="col">Editar</th>
@@ -20,13 +21,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($professor as $prof)
+                        @foreach ($professor as $professor)
                         <tr>
                             <td>{{ $professor->nome }}</a></td>
                             <td>{{ $professor->sobrenome }}</a></td>
                             <td>{{ $professor->email }}</a></td>
+                            <td>{{ $professor->modalidades }}</a></td>
                             <td>{{ $professor->apresentacao }}</a></td>
-                            <td>{{ $professor->metodologia }}</a></td>
+                            <td>{{ $professor->plataforma }}</a></td>
                             <td>{{ $professor->niveis }}</a></td>
                             <td>
                                 <img src="{{ $professor->imagem != null ? asset($professor->imagem) : asset('img/null.png') }}" alt="">
@@ -54,7 +56,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                <form action="/professor/remove/{{ $card->id }}" method="POST">
+                                                <form action="/professor/remove/{{ $professor->id }}" method="POST">
                                                     @csrf
                                                     {{ method_field('DELETE') }}
                                                     <button id="delete-contact" type="submit" class="btn btn-danger">Excluir</a>

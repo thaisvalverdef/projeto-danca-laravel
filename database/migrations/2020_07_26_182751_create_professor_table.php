@@ -17,11 +17,11 @@ class CreateProfessorTable extends Migration
             $table->id();
             $table->string('nome', 30);
             $table->string('sobrenome', 50);
-            $table->string('email', 30);
-            $table->string('apresentação', 500);
+            $table->string('email', 30)->unique();
+            $table->string('apresentacao', 500);
             $table->string('plataforma', 30);
-            $table->string('image', 100);
-            $table->string('senha', 100);
+            $table->string('imagem', 100)->nullable();
+            $table->string('senha', 100)->unique();
             $table->foreignId('modalidades');
             $table->foreignId('niveis');
             $table->timestamps();
