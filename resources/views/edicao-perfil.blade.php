@@ -22,21 +22,24 @@
         </div>
         <div class="form-group col-sm-9">
             <label for="nome">Sobrenome</label>
-            <input type="text" class="form-control" id="sobrenome">
+            <input type="text" name="sobrenome" value="{{ $professor->sobrenome }}" class="form-control {{$errors->has('sobrenome') ? ' is-invalid':''}}" id="sobrenome">
+            <div class="invalid-feedback">{{ $errors->first('sobrenome') }}</div>       
         </div>
         <div class="form-group col-sm-9">
             <label for="email">Endereço de email</label>
-            <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
+            <input type="text" name="email" value="{{ $professor->email }}" class="form-control {{$errors->has('email') ? ' is-invalid':''}}" id="email">
+            <div class="invalid-feedback">{{ $errors->first('email') }}</div>   
         </div>
         <br>
         <div class="form-group col-sm-9">
             <label for="apresentacao">Edite seu texto de apresentação</label>
-            <textarea class="form-control" id="apresentacao" rows="3"></textarea>
+            <textarea class="form-control {{$errors->has('apresentacao') ? ' is-invalid':''}}" id="apresentacao" rows="3" name="apresentacao" value="{{ $professor->apresentacao }}" ></textarea>
+            <div class="invalid-feedback">{{ $errors->first('apresentacao') }}</div>   
         </div>
         <br>
         <div class="form-group col-sm-9">
-            <label for="metodologia">Adicione ou exclua as suas metodologias de ensino</label>
-            <textarea class="form-control" id="metodologia" rows="3"></textarea>
+            <label for="plataforma">Adicione ou exclua as suas plataformas de ensino</label>
+            <textarea class="form-control" id="plataforma" rows="2"></textarea>
         </div>
         <br>
         <div class="form-group col-sm-6">

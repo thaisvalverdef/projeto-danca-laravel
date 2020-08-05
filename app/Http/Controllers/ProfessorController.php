@@ -33,15 +33,15 @@ class ProfessorController extends Controller
 
     public function create(Request $request)
     {
-        $request->validate([
-            'nome'=>'required|min:2',
-            'sobrenome'=>'required|min:2',
-            'email'=>'required|min:10',
-            'apresentacao'=>'required|min:20',
-            'plataforma'=>'required|min:2',
-            'senha'=>'required|min:6'
+        // $request->validate([
+        //     'nome'=>'required|min:2',
+        //     'sobrenome'=>'required|min:2',
+        //     'email'=>'required|min:10',
+        //     'apresentacao'=>'required|min:20',
+        //     'plataforma'=>'required|min:2',
+        //     'senha'=>'required|min:6'
 
-        ]);
+        // ]);
 
          // obtendo objeto imagem
          $imagem = $request->file('imagem');
@@ -67,13 +67,14 @@ class ProfessorController extends Controller
          }
  
 
-        // instanciando objeto card
         $professor = new Professor;
 
         // atribuindo valores recebidos no corpo da requisicao as respectivas colunas
         $professor->nome = $request->nome;
         $professor->sobrenome = $request->sobrenome;
         $professor->email = $request->email;
+        $professor->modalidades = $request->mod;
+        $professor->niveis = $request->niveis;
         $professor->apresentacao = $request->apresentacao;
         $professor->plataforma = $request->plataforma;
         $professor->imagem = $pathRelative;
