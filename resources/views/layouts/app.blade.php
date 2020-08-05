@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <title>@yield('titulo', 'Dança Em Casa')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -25,6 +26,7 @@
 </head>
 
 <body>
+    <div id="app">
     <header>
         <nav class="navbar text-primary navbar-expand-lg navbar-light"> 
 
@@ -49,8 +51,8 @@
 
                     <li class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" data-toggle="dropdown" id="navDrop">Modalidades</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modalidades</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/modalidades">Ballet</a>
                             <a class="dropdown-item" href="#">Contemporâneo</a>
                             <a class="dropdown-item" href="#">Dança de Salão</a>
@@ -66,9 +68,7 @@
                     </li>
                     @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-
-                       
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>                      
 
                     </li>
                     @if (Route::has('register'))
@@ -150,6 +150,7 @@
                                     <button type="button" class="btn" data-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
+                        </div>
 
 
 
@@ -159,8 +160,8 @@
     <main class="container-fluid">
         @yield('content')
     </main>
-    <footer class="page-footer font-small text-white bg-dark pt-4">
-        <div class="container-fluid">
+    <footer class="container-fluid fixed-bottom text-white bg-dark pt-4"> 
+        <div>
             <ul class="text-center mb-0 py-2">
                 <li class="list-inline-item">
                     <h5>Você dá aula de dança on-line?</h5>

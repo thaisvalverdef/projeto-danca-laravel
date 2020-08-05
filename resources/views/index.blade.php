@@ -33,7 +33,7 @@
       </a> --}}
 
 
-      <div class="container-fluid" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="container-fluid mx-0 e px-0" id="carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="{{asset("img/slide4.png") }}" alt="First slide">
@@ -54,16 +54,6 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-
-
-
-
-
-
-
-
-
-
 
 
     </div>
@@ -119,6 +109,7 @@
           <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
           <a href="#" class="btn">Saiba mais</a>
         </div>
+
       
       {{-- </div>
     </div>  
