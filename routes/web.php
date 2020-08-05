@@ -42,3 +42,12 @@ Route::get('/professor/search', 'ProfessorController@search');
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Criação do contato
+Route::get('/perfil', [
+    'uses' => 'ContactMessageController@create'
+]);
+Route::post('/perfil', [
+    'uses' => 'ContactMessageController@store',
+    'as' => 'contact.store'
+]);

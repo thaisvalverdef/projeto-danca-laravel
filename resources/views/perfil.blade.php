@@ -75,28 +75,46 @@
             </section>
 
             </br></br></br>
-            <form>
-                <div class="form-row">
-                    <h5 class="text-center pt-2 pb-0"> Entre em contato com o Professor!</h5>
-                </div>
+            <div class="row">
+                @if (Session::has('menssagem_rapida'))
+                    <div class"alert alert-success>{{ Session::get('menssagem_rapida')}}</div>
+                @endif
+                <form method="post" action="{{ route('contact.store') }}">
+                    {{ csrf_field() }}
+                    <div class="form-row">
+                        <h5 class="text-center pt-2 pb-0"> Entre em contato com o Professor!</h5>
+                     </div>
+
                 <div class="form-group col-md-10">
-                    <label for="exampleFormControlInput1">Nome Completo</label>
-                    <input type="nome" class="form-control" id="exampleFormControlInput1" placeholder="Preencha seu nome">
-                </div>
-                <div class="form-group col-md-10">
-                    <label for="exampleFormControlInput2">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+                    <label>Nome Completo</label>
+                    <input type="text" class="form-control" name="nome" placeholder="Preencha seu nome">
+                    @if ($erros->has('name'))
+                        <small class="form-text invalid-feedback">{{ $errors->first('name')}} </small>
+                    @endif
                 </div>
 
                 <div class="form-group col-md-10">
-                    <label for="exampleFormControlTextarea1">Mensagem</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                    <label>Email</label>
+                    <input type="text" class="form-control" name="email"  placeholder="name@example.com">
+                    @if ($erros->has('email'))
+                        <small class="form-text invalid-feedback">{{ $errors->first('email')}} </small>
+                    @endif
                 </div>
+
+                <div class="form-group col-md-10">
+                    <label>Mensagem</label>
+                     <textarea class="form-control" name="message" rows="7"></textarea>
+                     @if ($erros->has('message'))
+                        <small class="form-text invalid-feedback">{{ $errors->first('message')}} </small>
+                    @endif
+                </div>
+
                 <div class="form-group mt-4 mb-0 ml-3 d-flex flex-row justify-content-start">
                     <button type="reset" class="btn btn-secondary">Limpar</button>
                     <button type="submit" class="btn ml-2">Enviar</button>
                 </div>
             </form>
+          </div>
         </main>
     </div>
     
