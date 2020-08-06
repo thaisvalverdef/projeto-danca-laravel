@@ -29,14 +29,15 @@ Route::get('/lista-usuario', 'ProfessorController@index');
 Route::get('/cadastro', 'ProfessorController@add');
 Route::post('/cadastro', 'ProfessorController@create');
 
-//Alterando cards
+//Alterando perfil
 Route::get('/edicao-perfil/{id}', 'ProfessorController@edit');
 Route::put('/edicao-perfil/{id}', 'ProfessorController@update');
 
-//Deletando cards
+
+//Deletando perfil
 Route::delete('/professor/remove/{id}', 'ProfessorController@delete');
 
-//Pesquisando cards - filtro de busca
+//Pesquisando - filtro de busca
 Route::get('/professor/search', 'ProfessorController@search');
 
 Auth::routes();

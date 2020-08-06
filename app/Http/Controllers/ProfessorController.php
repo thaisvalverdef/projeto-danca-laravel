@@ -84,10 +84,10 @@ class ProfessorController extends Controller
         // efetuando o insert do registro na base de dados
         $professor->save();
 
-        // verificando se obteve registros para listar
+        // verificando se obteve perfil para listar
         if ($professor) {
             // retornando resposta de perfil criado
-            return view('cadastro')->with('success', 'Dados do perfil inserido com sucesso');
+            return view('perfil')->with('success', 'Dados do perfil inserido com sucesso');
         }
     }
     public function edit($id)
@@ -128,8 +128,8 @@ class ProfessorController extends Controller
 
         // verificando se obteve registros para listar
         if ($professor) {
-            // retornando resposta JSON com card criado
-            return view('edicao-perfil')->with([
+            // retornando resposta JSON com perfil criado
+            return view('perfil')->with([
                 'professor' => $professor,
                 'success' => 'Perfil atualizado com sucesso'
             ]);

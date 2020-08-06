@@ -33,13 +33,14 @@
         <br>
         <div class="form-group col-sm-9">
             <label for="apresentacao">Edite seu texto de apresentação</label>
-            <textarea class="form-control {{$errors->has('apresentacao') ? ' is-invalid':''}}" id="apresentacao" rows="3" name="apresentacao" value="{{ $professor->apresentacao }}" ></textarea>
+            <textarea class="form-control {{$errors->has('apresentacao') ? ' is-invalid':''}}" id="apresentacao" rows="3" name="apresentacao" value="{{ $professor->apresentacao }}" >{{ $professor->apresentacao }}</textarea>
             <div class="invalid-feedback">{{ $errors->first('apresentacao') }}</div>   
         </div>
         <br>
         <div class="form-group col-sm-9">
             <label for="plataforma">Adicione ou exclua as suas plataformas de ensino</label>
-            <textarea class="form-control" id="plataforma" rows="2"></textarea>
+            <textarea class="form-control {{$errors->has('plataforma') ? ' is-invalid':''}}" id="plataforma" rows="3" name="plataforma" value="{{ $professor->plataforma }}" >{{ $professor->plataforma }}</textarea>
+            <div class="invalid-feedback">{{ $errors->first('plataforma') }}</div>   
         </div>
         <br>
         <div class="form-group col-sm-6">
@@ -87,7 +88,8 @@
         </div>
         <div class="form-group col-sm-6">
             <label for="niveis">Altere o nível das suas aulas</label>
-            <select class="form-control" id="niveis">
+            <select class="form-control {{$errors->has('niveis') ? ' is-invalid':''}}" id="niveis" name="niveis" value="{{ $professor->niveis }}" >{{ $professor->niveis }}</textarea>
+                <div class="invalid-feedback">{{ $errors->first('niveis') }}</div>
                 <option>Iniciante</option>
                 <option>Intermediário</option>
                 <option>Avançado</option>
