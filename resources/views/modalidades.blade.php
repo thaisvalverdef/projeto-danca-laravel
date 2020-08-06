@@ -1,13 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<header class="bg-danger text-white" class="modalidades">
+<header  class="modalidades" class="bg-danger text-white mt-5">
     <div class="container text-center">
       <h1>Ballet</h1>
       <p class="lead">Escolha a/o professor(a): pronto, comece a praticar!</p>
     </div>
   </header>
- 
+ <body>
+   <br>
+   <br>
+   <br>
   <div class="card-deck">
     <div class="card ml-5">
       <img class="card-img-top" src="{{asset("img/aula7.png") }}" alt="Imagem de capa do card">
@@ -58,9 +61,11 @@
         <h5 class="card-title">Título do card</h5>
         <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
         <a href="#" class="btn">Saiba mais</a>
+        
       </div>
     </div>
   </div>  
 </div>
-</div>   
+</div>  
+ </body> 
 @endsection

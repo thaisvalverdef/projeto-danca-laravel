@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <title>@yield('titulo', 'Dança Em Casa')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -25,12 +26,12 @@
 </head>
 
 <body>
+    
     <header>
-        <nav class="navbar text-primary navbar-expand-lg navbar-light">
+        <nav class="navbar text-primary navbar-expand-lg navbar-light"> 
 
             <a class="navbar-brand" href="">
                 <img src="{{asset("img/logo_danca.png") }}" width="100" height="100">
-
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,20 +41,18 @@
 
                 <ul class="navbar-nav ml-auto">
 
-
                     <li class="nav-item">
 
-                        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Como funciona</a>
+                        <a class="nav-link" href="/como-funciona">Como funciona</a>
                     </li>
 
-                    <li class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" data-toggle="dropdown" id="navDrop">Modalidades</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Ballet</a>
+                  <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modalidades</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/modalidades">Ballet</a>
                             <a class="dropdown-item" href="#">Contemporâneo</a>
                             <a class="dropdown-item" href="#">Dança de Salão</a>
                             <a class="dropdown-item" href="#">Dança do Ventre</a>
@@ -66,9 +65,11 @@
                             <a class="dropdown-item" href="#">Outros</a>
                         </div>
                     </li>
+
                     @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>                      
+
                     </li>
                     @if (Route::has('register'))
                     <li class="nav-item">
@@ -90,7 +91,7 @@
                     </li> --}}
 
                 </ul>
-
+            </div>
         </nav>
 
         <!--Modal: Login / Register Form-->
@@ -148,25 +149,28 @@
                                     </div>
                                     <button type="button" class="btn" data-dismiss="modal">Fechar</button>
                                 </div>
-
                             </div>
-
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </header>
 
 
-    <main class="container-fluid">
+    <main class="container-fluid px-0">
         @yield('content')
     </main>
-    <footer class="page-footer font-small text-white bg-dark pt-4">
-        <div class="container-fluid">
+    <footer class="container-fluid text-white bg-dark pt-4"> 
+        <div>
             <ul class="text-center mb-0 py-2">
                 <li class="list-inline-item">
                     <h5>Você dá aula de dança on-line?</h5>
                 </li>
                 <li class="list-inline-item">
-                    <a href="#!" class="btn" style="margin-bottom:15px;">Cadastre-se!</a>
+                    <a href="/register" class="btn" style="margin-bottom:15px;">Cadastre-se!</a>
                 </li>
             </ul>
         </div>

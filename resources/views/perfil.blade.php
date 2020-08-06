@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    </header>
+    
     <div class=título>
         Saiba mais sobre o seu Professor!
     </div>
