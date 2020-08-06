@@ -13,7 +13,7 @@
       @csrf
       <div class="form-group col-sm-9">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" name="nome">
+        <input type="text" class="form-control" name="nome" value="{{$professor->nome}}">
       </div>
       <div class="form-group col-sm-9">
         <label for="nome">Sobrenome</label>

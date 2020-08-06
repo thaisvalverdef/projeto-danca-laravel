@@ -26,6 +26,22 @@ class ProfessorController extends Controller
         }
     }
 
+    public function carregarProfessor($id)
+    {
+        // Obtendo todos os registros da tabela professor
+        $prof = Professor::find($id);
+        
+        // obtendo apenas registros com id menor que 50 sempre que for utilizar metodos diferentes do all() e paginate()
+        // lembre-se de utilizar o metodo get() no final da sua query
+        // $cards = Card::where('id', '<=', '50')->get();
+
+        // verificando se obteve registros para listar
+        if ($prof) {
+            // retornando resposta JSON com todos cards encontrados
+            return view('cadastro')->with('professor', $prof);
+        }
+    }
+
     public function add()
     {
         return view ('cadastro');

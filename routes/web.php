@@ -52,6 +52,7 @@ Route::get('/lista-usuario', 'ProfessorController@index');
 //Criando perfil
 Route::get('/cadastro', 'ProfessorController@add');
 Route::post('/cadastro', 'ProfessorController@create');
+Route::put('/cadastro', 'ProfessorController@carregarProfessor');
 
 //Alterando perfil
 Route::get('/edicao-perfil/{id}', 'ProfessorController@edit');
