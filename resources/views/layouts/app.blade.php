@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <div id="app">
+    
     <header>
         <nav class="navbar text-primary navbar-expand-lg navbar-light"> 
 
@@ -49,8 +49,7 @@
                         <a class="nav-link" href="/como-funciona">Como funciona</a>
                     </li>
 
-                    <li class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
+                  <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modalidades</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/modalidades">Ballet</a>
@@ -66,6 +65,7 @@
                             <a class="dropdown-item" href="#">Outros</a>
                         </div>
                     </li>
+
                     @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>                      
@@ -91,7 +91,7 @@
                     </li> --}}
 
                 </ul>
-
+            </div>
         </nav>
 
         <!--Modal: Login / Register Form-->
@@ -151,16 +151,19 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </header>
 
 
-    <main class="container-fluid">
+    <main class="container-fluid px-0">
         @yield('content')
     </main>
-    <footer class="container-fluid fixed-bottom text-white bg-dark pt-4"> 
+    <footer class="container-fluid text-white bg-dark pt-4"> 
         <div>
             <ul class="text-center mb-0 py-2">
                 <li class="list-inline-item">

@@ -46,3 +46,7 @@
     background-color: #f64d6b;
     color: white;
 }
+
+main {
+    min-height: calc(100vh - 250px);
+}

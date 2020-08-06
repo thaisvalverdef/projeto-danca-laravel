@@ -2,61 +2,28 @@
 
 @section('content')
 
-    {{-- <div class="container-fluid" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="{{asset("img/slide4.png") }}" alt="Primeiro Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="{{asset("img/slide1.png") }}" alt="Segundo Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="{{asset("img/slide2.png") }}" alt="Terceiro Slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="{{asset("img/slide3.png") }}" alt="Quarto Slide">
-        </div>
+  <div class="carousel slide w-100 mx-0" id="carouselExampleControls" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{{asset("img/slide4.png") }}" alt="First slide">
       </div>
-      <a class="carousel-control-prev" href="" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Próximo</span>
-      </a> --}}
-
-
-      <div class="container-fluid mx-0 e px-0" id="carousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="{{asset("img/slide4.png") }}" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="{{asset("img/slide1.png") }}" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="{{asset("img/slide2.png") }}" alt="Third slide">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{asset("img/slide1.png") }}" alt="Second slide">
       </div>
-
-
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{asset("img/slide2.png") }}" alt="Third slide">
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
     <h2 class="col-12 text-center text info mt-5 mb-5">Aulas da semana</h2>
     <div class="card-deck">
       <div class="card ml-5">
