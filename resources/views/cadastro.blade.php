@@ -48,31 +48,35 @@
           <label for="horns">Dança de Salão</label>
         </div>
         <div>
-          <input type="checkbox" id="ventre" name="mod">
+          <input type="checkbox" id="ventre" name="mod" value="4">
           <label for="horns">Dança do Ventre</label>
         </div>
         <div>
-          <input type="checkbox" id="funk" name="mod">
+          <input type="checkbox" id="funk" name="mod" value="5">
           <label for="horns">Funk</label>
         </div>
         <div>
-          <input type="checkbox" id="break" name="mod">
+          <input type="checkbox" id="break" name="mod" value="6">
           <label for="horns">Hip Hop / Break</label>
         </div>
         <div>
-          <input type="checkbox" id="jazz" name="mod">
+          <input type="checkbox" id="jazz" name="mod" value="7">
           <label for="horns">Jazz</label>
         </div>
         <div>
-          <input type="checkbox" id="sapateado" name="mod">
+          <input type="checkbox" id="samba" name="mod" value="8">
+          <label for="horns">Samba</label>
+        </div>
+        <div>
+          <input type="checkbox" id="sapateado" name="mod" value="9">
           <label for="horns">Sapateado</label>
         </div>
         <div>
-          <input type="checkbox" id="sertanejo" name="mod">
+          <input type="checkbox" id="sertanejo" name="mod" value="10">
           <label for="horns">Sertanejo</label>
         </div>
         <div>
-          <input type="checkbox" id="outros" name="mod">
+          <input type="checkbox" id="outros" name="mod" value="11">
           <label for="horns">Outros</label>
         </div>
       </div>

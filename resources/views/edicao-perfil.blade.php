@@ -43,56 +43,60 @@
         </div>
         <br>
         <div class="form-group col-sm-6">
-            <label for="modalidade">Adicione ou exclua suas modalidades</label>
+            <label for="modalidade">Altere sua modalidade</label>
             <div>
-                <input type="checkbox" id="ballet" name="ballet" checked>
+                <input type="checkbox" id="ballet" name="mod" value="1">
                 <label for="scales">Ballet</label>
-            </div>
-            <div>
-                <input type="checkbox" id="contemporaneo" name="contemporaneo">
+              </div>
+              <div>
+                <input type="checkbox" id="contemporaneo" name="mod" value="2">
                 <label for="horns">Contemporâneo</label>
-            </div>
-            <div>
-                <input type="checkbox" id="salao" name="salao">
+              </div>
+              <div>
+                <input type="checkbox" id="salao" name="mod" value="3">
                 <label for="horns">Dança de Salão</label>
-            </div>
-            <div>
-                <input type="checkbox" id="ventre" name="ventre">
+              </div>
+              <div>
+                <input type="checkbox" id="ventre" name="mod" value="4">
                 <label for="horns">Dança do Ventre</label>
-            </div>
-            <div>
-                <input type="checkbox" id="funk" name="funk">
+              </div>
+              <div>
+                <input type="checkbox" id="funk" name="mod" value="5">
                 <label for="horns">Funk</label>
-            </div>
-            <div>
-                <input type="checkbox" id="break" name="break">
+              </div>
+              <div>
+                <input type="checkbox" id="break" name="mod" value="6">
                 <label for="horns">Hip Hop / Break</label>
-            </div>
-            <div>
-                <input type="checkbox" id="jazz" name="jazz">
+              </div>
+              <div>
+                <input type="checkbox" id="jazz" name="mod" value="7">
                 <label for="horns">Jazz</label>
-            </div>
-            <div>
-                <input type="checkbox" id="sapateado" name="sapateado">
+              </div>
+              <div>
+                <input type="checkbox" id="samba" name="mod" value="8">
+                <label for="horns">Samba</label>
+              </div>
+              <div>
+                <input type="checkbox" id="sapateado" name="mod" value="9">
                 <label for="horns">Sapateado</label>
-            </div>
-            <div>
-                <input type="checkbox" id="sertanejo" name="sertanejo">
+              </div>
+              <div>
+                <input type="checkbox" id="sertanejo" name="mod" value="10">
                 <label for="horns">Sertanejo</label>
-            </div>
-            <div>
-                <input type="checkbox" id="outros" name="outros">
+              </div>
+              <div>
+                <input type="checkbox" id="outros" name="mod" value="11">
                 <label for="horns">Outros</label>
-            </div>
+              </div>
         </div>
         <div class="form-group col-sm-6">
             <label for="niveis">Altere o nível das suas aulas</label>
             <select class="form-control {{$errors->has('niveis') ? ' is-invalid':''}}" id="niveis" name="niveis" value="{{ $professor->niveis }}" >{{ $professor->niveis }}</textarea>
                 <div class="invalid-feedback">{{ $errors->first('niveis') }}</div>
-                <option>Iniciante</option>
-                <option>Intermediário</option>
-                <option>Avançado</option>
-                <option>Todos os níveis</option>
+                <option value="1">Iniciante</option>
+                <option value="2">Intermediário</option>
+                <option value="3">Avançado</option>
+                <option value="4">Todos os níveis</option>
             </select>
         </div>
 

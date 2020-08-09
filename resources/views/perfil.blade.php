@@ -1,48 +1,51 @@
 @extends('layouts.app')
 
 @section('content')
-    </header>
+
     <div class=título>
         Saiba mais sobre o seu Professor!
     </div>
     <div id="divPai">;
-        <aside>
-            <h3>Professor Fulano</h3>
+        <aside>            
+            <h3>{{ $professor->nome }} {{ $professor->sobrenome }}</h3>
             <br>
 
-            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <img src="{{ $professor->imagem != null ? asset($professor->imagem) : asset('img/null.png') }}" alt="">
+
+            {{-- <div id="carouselExampleCaptions" class="carousel slide"
+                data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active">
-                        <img  src="{{asset("img/1.jpg") }}"  src="./assets/img/" class="d-block w-100" alt="Foto1">
+                        <img src="{{ asset('img/1.jpg') }}" src="./assets/img/" class="d-block w-100" alt="Foto1">
                     </li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="1">
-                        <img src="{{asset("img/2.jpg") }}" class="d-block w-100" alt="Foto2">
+                        <img src="{{ asset('img/2.jpg') }}" class="d-block w-100" alt="Foto2">
                     </li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="2">
-                        <img src="{{asset("img/3.jpg") }}" class="d-block w-100" alt="Foto3">
+                        <img src="{{ asset('img/3.jpg') }}" class="d-block w-100" alt="Foto3">
                     </li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="3">
-                        <img src="{{asset("img/4.jpg") }}" class="d-block w-100" alt="Foto4">
+                        <img src="{{ asset('img/4.jpg') }}" class="d-block w-100" alt="Foto4">
                     </li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{{asset("img/1.jpg") }}" class="d-block w-100" alt="Foto1">
+                        <img src="{{ asset('img/1.jpg') }}" class="d-block w-100" alt="Foto1">
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="{{asset("img/2.jpg") }}" class="d-block w-100" alt="Foto2">
+                        <img src="{{ asset('img/2.jpg') }}" class="d-block w-100" alt="Foto2">
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="{{asset("img/3.jpg") }}" class="d-block w-100" alt="Foto3">
+                        <img src="{{ asset('img/3.jpg') }}" class="d-block w-100" alt="Foto3">
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="{{asset("img/4.jpg") }}" class="d-block w-100" alt="Foto4">
+                        <img src="{{ asset('img/4.jpg') }}" class="d-block w-100" alt="Foto4">
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
@@ -54,14 +57,14 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                </div>
+                </div> --}}
                 </br>
                 <h6>Modalidade</h6>
-                Balé <br><br>
+                {{ $professor->modalidades }} <br><br>
                 <h6>Dificuldade</h6>
-                Iniciante / Intermediário / Avançado <br><br>
+                {{ $professor->niveis }} <br><br>
                 <h6>Plataforma da aula</h6>
-                Zoom / Google Meet<br><br>
+                {{ $professor->plataforma }}<br><br>
                 <h6>Redes sociais</h6>
                 <a href="" target="_blank" rel="noopener" title="Acesse meu perfil no Facebook"><i class="fab fa-facebook fa-2x"></i></a> <a href="" target="_blank" rel="noopener" title="Acesse meu perfil no Instagram"><i class="fab fa-instagram fa-2x"></i></a></p>
         </aside>
@@ -69,8 +72,7 @@
             <section>
                 <h3>Apresentação</h3></br>
                 <article>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates velit, dignissimos dolorum facere reiciendis enim aut sint reprehenderit, iste in sed nemo. Dicta rem nobis corrupti eaque eveniet nesciunt nostrum?
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis ullam facere quisquam reprehenderit odit? Voluptatum voluptas modi nostrum fuga sit vel. Iste odio excepturi eius veritatis? Ullam, debitis nulla.
+                    {{ $professor->apresentacao }}
                 </article>
             </section>
 
@@ -99,5 +101,5 @@
             </form>
         </main>
     </div>
-    
+
 @endsection

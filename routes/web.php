@@ -60,6 +60,9 @@ Route::post('/cadastro', 'ProfessorController@create');
 //Visualizando o próprio perfil do professor
 Route::get('/perfil-professor/{id}', 'ProfessorController@perfilProfessor');
 
+//Usuário visualizando o perfil do professor
+Route::get('/perfil/{id}', 'ProfessorController@perfil');
+
 //Alterando perfil
 Route::get('/edicao-perfil/{id}', 'ProfessorController@edit');
 Route::put('/edicao-perfil/{id}', 'ProfessorController@update');

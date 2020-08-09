@@ -13,7 +13,7 @@ class ProfessorController extends Controller
         $professor = Professor::all();
 
         // obtendo todos registros e aplicando paginacao para exibir apenas 10 registros por pagina
-        $professor = Professor::paginate(50);
+        $professor = Professor::paginate(20);
 
       
         // verificando se obteve registros para listar
@@ -34,6 +34,19 @@ class ProfessorController extends Controller
         if ($professor) {
             // retornando perfil para o próprio professor visualizar
             return view('perfil-professor')->with('professor',$professor);
+        }
+    }
+
+    public function perfil($id)
+    {
+       
+        // Obtendo todos os registros da tabela professor
+        $professor = Professor::find($id);
+    
+        // verificando se obteve registros para listar
+        if ($professor) {
+            // retornando perfil para o próprio professor visualizar
+            return view('perfil')->with('professor',$professor);
         }
     }
 
