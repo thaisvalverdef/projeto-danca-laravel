@@ -37,6 +37,10 @@ Route::get('/perfil', function () {
     return view('perfil');
 });
 
+Route::get('/perfil-professor', function () {
+    return view('perfil-professor');
+});
+
 Route::get('/lista-usuario', function () {
     return view('lista-usuario');
 });
@@ -52,7 +56,9 @@ Route::get('/lista-usuario', 'ProfessorController@index');
 //Criando perfil
 Route::get('/cadastro', 'ProfessorController@add');
 Route::post('/cadastro', 'ProfessorController@create');
-Route::put('/cadastro', 'ProfessorController@carregarProfessor');
+
+//Visualizando o próprio perfil do professor
+Route::get('/perfil-professor/{id}', 'ProfessorController@perfilProfessor');
 
 //Alterando perfil
 Route::get('/edicao-perfil/{id}', 'ProfessorController@edit');

@@ -10,8 +10,7 @@
   </header>
 
 <div class="container" id="containeredicao">
-                {{-- falta arrumar todos os campos igual campo nome --}}
-
+                
     <form method="POST" action="/edicao-perfil/{{$professor->id}}" enctype="multipart/form-data">
         @csrf
         {{ method_field('PUT') }}
@@ -106,23 +105,12 @@
         <form>
             <div class="form-group col-sm-10">
                 <label for="foto">Altere suas imagens de divulgação (Dimensões recomendadas: 285x175) </label>
-                <input type="file" class="form-control-file" id="foto">
-            </div>
+                <input type="file" name="imagem"  value="{{ old('imagem') }}" class="form-control{{$errors->has('imagem') ? ' is-invalid':''}}" id="imagem">
+                <div class="invalid-feedback">{{ $errors->first('imagem') }}</div>            </div>
         </form>
         <br>
 
-        <button type="submit" class="btn" id="btnConfirmar" style="margin-left: 10px; margin-bottom:40px">Confirmar</button>
-        <div class="form-group">
-            <?php
-            if (isset($_POST) && $_POST) {
-                if ($cadastrou) {
-                    echo '<div class="col-md-6 mt-2 alert alert-success">Usuário cadastrado com sucesso</div>';
-                } else {
-                    echo '<div class="col-md-6 mt-2 alert alert-danger">Falha ao processar requisição</div>';
-                }
-            }
-            ?>
-        </div>
+        <button type="submit" class="btn" id="btnConfirmar" style="margin-left: 10px; margin-bottom:40px">Confirmar</button>           
     </form>
 </div>
 

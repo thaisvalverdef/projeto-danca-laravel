@@ -20,8 +20,8 @@ class CreateProfessorTable extends Migration
             $table->string('email', 30)->unique();
             $table->string('apresentacao', 500);
             $table->string('plataforma', 30);
-            $table->string('imagem', 100)->nullable();
-            $table->string('senha', 100)->unique();
+            $table->string('imagem', 100)->null();
+            $table->string('senha', 15);
             $table->foreignId('modalidades');
             $table->foreignId('niveis');
             $table->timestamps();

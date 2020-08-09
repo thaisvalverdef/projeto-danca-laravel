@@ -10,37 +10,34 @@ class ProfessorController extends Controller
     public function index()
     {
         // Obtendo todos os registros da tabela professor
-        $prof = Professor::all();
+        $professor = Professor::all();
 
         // obtendo todos registros e aplicando paginacao para exibir apenas 10 registros por pagina
-        $prof = Professor::paginate(10);
+        $professor = Professor::paginate(50);
 
-        // obtendo apenas registros com id menor que 50 sempre que for utilizar metodos diferentes do all() e paginate()
-        // lembre-se de utilizar o metodo get() no final da sua query
-        // $cards = Card::where('id', '<=', '50')->get();
-
+      
         // verificando se obteve registros para listar
-        if ($prof) {
-            // retornando resposta JSON com todos cards encontrados
-            return view('lista-usuario')->with('professor', $prof);
+        if ($professor) {
+            // retornando resposta JSON com todos os professores encontrados
+            return view('lista-usuario')->with('professor', $professor);
         }
     }
 
-    public function carregarProfessor($id)
+  
+    public function perfilProfessor($id)
     {
+       
         // Obtendo todos os registros da tabela professor
-        $prof = Professor::find($id);
-        
-        // obtendo apenas registros com id menor que 50 sempre que for utilizar metodos diferentes do all() e paginate()
-        // lembre-se de utilizar o metodo get() no final da sua query
-        // $cards = Card::where('id', '<=', '50')->get();
-
+        $professor = Professor::find($id);
+    
         // verificando se obteve registros para listar
-        if ($prof) {
-            // retornando resposta JSON com todos cards encontrados
-            return view('cadastro')->with('professor', $prof);
+        if ($professor) {
+            // retornando perfil para o próprio professor visualizar
+            return view('perfil-professor')->with('professor',$professor);
         }
     }
+
+   
 
     public function add()
     {
@@ -59,7 +56,7 @@ class ProfessorController extends Controller
 
         // ]);
 
-         // obtendo objeto imagem
+         // obtendo imagem
          $imagem = $request->file('imagem');
 
          // verificando se usuario nao enviou imagem
@@ -102,8 +99,8 @@ class ProfessorController extends Controller
 
         // verificando se obteve perfil para listar
         if ($professor) {
-            // retornando resposta de perfil criado
-            return view('perfil')->with('success', 'Dados do perfil inserido com sucesso');
+            // retornando resposta de perfil criado.
+            return view('perfil-professor')->with(['professor'=>$professor,'success'=>'Dados do perfil inserido com sucesso']);
         }
     }
     public function edit($id)
@@ -113,20 +110,19 @@ class ProfessorController extends Controller
 
         if($professor){
             // retornando view de edicao de cadastro
-            return view('edicao-perfil')->with('professor', $professor);
-        }
+            return view('edicao-perfil')->with('professor',$professor);        }
     }
 
     public function update(Request $request, $id){
         // aplicando validacao nos campos com o validate do laravel
-        $request->validate([
-            'nome'=>'required|min:2',
-            'sobrenome'=>'required|min:2',
-            'email'=>'required|min:10',
-            'apresentacao'=>'required|min:20',
-            'plataforma'=>'required|min:2',
-            'senha'=>'required|min:6'
-        ]);
+        // $request->validate([
+        //     'nome'=>'required|min:2',
+        //     'sobrenome'=>'required|min:2',
+        //     'email'=>'required|min:10',
+        //     'apresentacao'=>'required|min:20',
+        //     'plataforma'=>'required|min:2',
+        //     'senha'=>'required|min:6'
+        // ]);
 
          // encontrando registro pelo id
          $professor = Professor::find($id);
@@ -136,6 +132,8 @@ class ProfessorController extends Controller
         $professor->sobrenome = $request->sobrenome;
         $professor->email = $request->email;
         $professor->apresentacao = $request->apresentacao;
+        $professor->modalidades = $request->mod;
+        $professor->niveis = $request->niveis;
         $professor->plataforma = $request->plataforma;
         $professor->imagem = $pathRelative;
         $professor->senha = $request->senha;
@@ -144,12 +142,9 @@ class ProfessorController extends Controller
 
         // verificando se obteve registros para listar
         if ($professor) {
-            // retornando resposta JSON com perfil criado
-            return view('perfil')->with([
-                'professor' => $professor,
-                'success' => 'Perfil atualizado com sucesso'
-            ]);
-        }
+            // retornando resposta JSON com perfil atualizado
+            return view('perfil-professor')->with(['professor'=>$professor,'success'=>'Perfil atualizado com sucesso']);
+            }
     }
 
     public function delete($id) {
@@ -166,7 +161,7 @@ class ProfessorController extends Controller
             $prof = Professor::all();
 
             return view('lista-usuario')->with([
-                'professor' => $prof,
+                'professor' => $professor,
                 'success' => 'Registro excluído com sucesso'
             ]);
         }

@@ -1,10 +1,9 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Faça o seu perfil!</h1>
-      <p class="lead">Conte mais sobre você no seu perfil no <strong>Dança Em Casa</strong> e conquiste mais clientes para as suas aulas on-line</p>
+      <h1 class="display-4">Divulgue suas aulas online!</h1>
+      <p class="lead">Cadastre o seu perfil no <strong>Dança Em Casa</strong> e conquiste mais alunos para as suas aulas on-line.</p>
     </div>
   </div>
   
@@ -13,7 +12,7 @@
       @csrf
       <div class="form-group col-sm-9">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" name="nome" value="{{$professor->nome}}">
+        <input type="text" class="form-control" name="nome">
       </div>
       <div class="form-group col-sm-9">
         <label for="nome">Sobrenome</label>
@@ -95,8 +94,9 @@
       <br>
       
         <div class="form-group col-sm-10">
-          <label for="foto">Insira a sua imagem de divulgação (Dimensões recomendadas: 285x175) </label>
-          <input type="file" class="form-control-file" id="foto">
+          <label for="foto">Insira a sua imagem de divulgação (Dimensões recomendadas: 285x175) </label>      
+            <input type="file" name="imagem"  value="{{ old('imagem') }}" class="form-control{{$errors->has('imagem') ? ' is-invalid':''}}" id="imagem">
+            <div class="invalid-feedback">{{ $errors->first('imagem') }}</div>
         </div>
       
       <br>
