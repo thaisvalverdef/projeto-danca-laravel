@@ -7,7 +7,7 @@
 </div>
 <div id="divPai">
     <aside>
-        <h3>Professor Fulano</h3>
+        <h3>Julaiana Alves</h3>
         <br>
 
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">

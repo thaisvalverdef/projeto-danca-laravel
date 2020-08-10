@@ -24,12 +24,12 @@
     </a>
   </div>
 
-    <h2 class="col-12 text-center text info mt-5 mb-5">Aulas da semana</h2>
+    <h2 class="col-12 text-center text info mt-5 mb-5">Professores da semana</h2>
     <div class="card-deck flex-box">
       <div class="card">
         <img class="card-img-top" src="{{asset("img/aula1.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
-          <h5 class="card-title">Título do card</h5>
+          <h5 class="card-title">Dança de Salão com Caroline e Sandro Fagundes</h5>
           <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
           <a href="/perfil-publico" class="btn" class="saiba">Saiba mais</a>
   
@@ -38,17 +38,17 @@
       <div class="card flex-box">
         <img class="card-img-top" src="{{asset("img/aula5.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
-          <h5 class="card-title">Título do card</h5>
+          <h5 class="card-title">Hip Hop com Jefferson e Amanda</h5>
           <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-          <a href="#" class="btn">Saiba mais</a>
+          <a href="/perfil-publico" class="btn">Saiba mais</a>
         </div>
       </div>
       <div class="card flex-box">
         <img class="card-img-top" src="{{asset("img/aula7.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
-          <h5 class="card-title">Título do card</h5>
+          <h5 class="card-title">Ballet com Juliana Alves</h5>
           <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
-          <a href="#" class="btn">Saiba mais</a>
+          <a href="/perfil-publico" class="btn">Saiba mais</a>
         </div>
       </div>
     </div>
@@ -56,25 +56,25 @@
       <div class="card flex-box">
         <img class="card-img-top" src="{{asset("img/aula4.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
-          <h5 class="card-title">Título do card</h5>
+          <h5 class="card-title">Funk e Pop com Isadora Silva</h5>
           <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-          <a href="#" class="btn btn-rigth">Saiba mais</a>
+          <a href="/perfil-publico" class="btn btn-rigth">Saiba mais</a>
         </div>
       </div>
       <div class="card flex-box">
         <img class="card-img-top" src="{{asset("img/aula8.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
-          <h5 class="card-title">Título do card</h5>
+          <h5 class="card-title">Dança do Ventre com Samira Brito</h5>
           <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-          <a href="#" class="btn">Saiba mais</a>
+          <a href="/perfil-publico" class="btn">Saiba mais</a>
         </div>
       </div>
       <div class="card flex-box">
         <img class="card-img-top" src="{{asset("img/aula6.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
-          <h5 class="card-title">Título do card</h5>
+          <h5 class="card-title">Breakdance Alex Castro</h5>
           <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
-          <a href="#" class="btn">Saiba mais</a>
+          <a href="/perfil-publico" class="btn">Saiba mais</a>
         </div>
 
       
