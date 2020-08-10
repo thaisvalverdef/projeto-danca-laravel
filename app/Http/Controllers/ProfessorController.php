@@ -97,14 +97,13 @@ class ProfessorController extends Controller
 
         // atribuindo valores recebidos no corpo da requisicao as respectivas colunas
         $professor->nome = $request->nome;
-        $professor->sobrenome = $request->sobrenome;
         $professor->email = $request->email;
         $professor->modalidades = $request->mod;
         $professor->niveis = $request->niveis;
         $professor->apresentacao = $request->apresentacao;
         $professor->plataforma = $request->plataforma;
         $professor->imagem = $pathRelative;
-        $professor->senha = $request->senha;
+        
 
 
         // efetuando o insert do registro na base de dados
@@ -137,19 +136,31 @@ class ProfessorController extends Controller
         //     'senha'=>'required|min:6'
         // ]);
 
+
+        $user = User::findOrFail(Auth::user()->id);
+        $user->name = $request->input('name');
+                $user->email = $request->input('email');
+
+        if (!is_null($request->input('current_password'))) {
+            if (Hash::check($request->input('current_password'), $user->password)) {
+                $user->password = $request->input('new_password');
+            } else {
+                return redirect()->back()->withInput();
+            }
+        }
+
          // encontrando registro pelo id
          $professor = Professor::find($id);
 
         // atribuindo valores recebidos no corpo da requisicao as respectivas colunas
         $professor->nome = $request->nome;
-        $professor->sobrenome = $request->sobrenome;
         $professor->email = $request->email;
         $professor->apresentacao = $request->apresentacao;
         $professor->modalidades = $request->mod;
         $professor->niveis = $request->niveis;
         $professor->plataforma = $request->plataforma;
         $professor->imagem = $pathRelative;
-        $professor->senha = $request->senha;
+        
 
         $professor->update();
 

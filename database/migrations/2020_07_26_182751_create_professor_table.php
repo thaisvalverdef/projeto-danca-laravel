@@ -16,12 +16,10 @@ class CreateProfessorTable extends Migration
         Schema::create('professor', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 30);
-            $table->string('sobrenome', 50);
             $table->string('email', 30)->unique();
             $table->string('apresentacao', 500);
             $table->string('plataforma', 30);
             $table->string('imagem', 100)->null();
-            $table->string('senha', 15);
             $table->foreignId('modalidades');
             $table->foreignId('niveis');
             $table->timestamps();

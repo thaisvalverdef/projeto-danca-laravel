@@ -12,15 +12,11 @@
       @csrf
       <div class="form-group col-sm-9">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" name="nome">
-      </div>
-      <div class="form-group col-sm-9">
-        <label for="nome">Sobrenome</label>
-        <input type="text" class="form-control" name="sobrenome">
+        <input type="text" class="form-control" name="nome" value="{{ old('name', Auth::user()->name) }}">
       </div>
       <div class="form-group col-sm-9">
         <label for="email">Endereço de email</label>
-        <input type="email" class="form-control" name="email" placeholder="nome@exemplo.com">
+        <input type="email" class="form-control" name="email" value="{{ old('name', Auth::user()->email) }}">
       </div>
       <br>
       <div class="form-group col-sm-9">
@@ -89,12 +85,7 @@
           <option value="4">Todos os níveis</option>
         </select>
       </div>
-  
-  
-      <div class="form-group col-sm-6">
-        <label for="senha">Senha</label>
-        <input type="password" class="form-control" id="senha" name="senha" required>
-      </div>
+
       <br>
       
         <div class="form-group col-sm-10">
