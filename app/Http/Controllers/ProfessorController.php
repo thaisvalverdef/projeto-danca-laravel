@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Professor;
+use Illuminate\Support\Facades\DB;
 
 class ProfessorController extends Controller
 {
@@ -29,6 +30,12 @@ class ProfessorController extends Controller
        
         // Obtendo todos os registros da tabela professor
         $professor = Professor::find($id);
+        $professor = DB::table('professor')
+        ->leftjoin('modalidades', 'professor.modalidades','=', 'modalidades.id')
+        ->leftjoin('niveis', 'professor.niveis','=', 'niveis.id')
+        ->where('professor.id', $id)
+        ->select('professor.id', 'professor.nome', 'professor.email', 'professor.apresentacao', 'professor.plataforma', 'professor.imagem','professor.niveis', 'modalidades.modalidades', 'niveis.niveis')
+        ->first();
     
         // verificando se obteve registros para listar
         if ($professor) {
@@ -42,6 +49,12 @@ class ProfessorController extends Controller
        
         // Obtendo todos os registros da tabela professor
         $professor = Professor::find($id);
+        $professor = DB::table('professor')
+        ->leftjoin('modalidades', 'professor.modalidades','=', 'modalidades.id')
+        ->leftjoin('niveis', 'professor.niveis','=', 'niveis.id')
+        ->where('professor.id', $id)
+        ->select('professor.id', 'professor.nome', 'professor.email', 'professor.apresentacao', 'professor.plataforma', 'professor.imagem','professor.niveis', 'modalidades.modalidades', 'niveis.niveis')
+        ->first();
     
         // verificando se obteve registros para listar
         if ($professor) {

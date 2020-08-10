@@ -7,7 +7,7 @@
     </div>
     <div id="divPai">;
         <aside>            
-            <h3>{{ $professor->nome }} {{ $professor->sobrenome }}</h3>
+            <h3>{{ $professor->nome }}</h3>
             <br>
 
             <img src="{{ $professor->imagem != null ? asset($professor->imagem) : asset('img/null.png') }}" alt="">

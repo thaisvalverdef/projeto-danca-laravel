@@ -12,6 +12,6 @@ class Professor extends Model
     protected $table = 'professor';
     // indicando quais colunas da tabela professor iremos trabalhar, seja para inserir ou alterar dados dos registros
     protected $fillable = [
-        'nome', 'email', 'apresentacao', 'plataforma', 'imagem'
+        'nome', 'email', 'apresentacao', 'modalidades', 'niveis', 'plataforma', 'imagem', 'senha'
     ];
 }

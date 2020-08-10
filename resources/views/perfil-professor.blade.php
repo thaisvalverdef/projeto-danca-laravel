@@ -2,26 +2,29 @@
 
 @section('content')
 
-    <div class="col-md-5">
-        @if (isset($success) && $success != '')
-            <section class="row">
-                <div class="col-12">
-                    <div class="message alert alert-success text-center">
-                        {{ $success }}
-                    </div>
+<div class="col-md-12">
+    @if (isset($success) && $success != '')
+        <section class="row">
+            <div class="col-12">
+                <div class="message alert alert-success text-center">
+                    {{ $success }}
                 </div>
-            </section>
-        @endif
-    </div>
+            </div>
+        </section>
+    @endif
+</div>
+<div class="col-md-12">
+<a href="/edicao-perfil/{{$professor->id}}">Clique para voltar para a página de edição do perfil
+    <i class="fas fa-edit"></i>
+</a>
+</div>
+</br>
     <div class=título>
         Saiba mais sobre o seu Professor!
     </div>
     <div id="divPai">;
         <aside>
-            <a href="/edicao-perfil/{{$professor->id}}">Clique para voltar para a página de edição do perfil
-                <i class="fas fa-edit"></i>
-            </a>
-            <h3>{{ $professor->nome }} {{ $professor->sobrenome }}</h3>
+            <h3>{{ $professor->nome }}</h3>
             <br>
 
             <img src="{{ $professor->imagem != null ? asset($professor->imagem) : asset('img/null.png') }}" alt="">
