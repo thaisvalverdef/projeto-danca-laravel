@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="col-md-5">
+    {{-- <div class="col-md-5 text-center">
         @if (isset($success) && $success != '')
             <section class="row">
                 <div class="col-12">
@@ -10,17 +10,18 @@
                         {{ $success }}
                     </div>
                 </div>
-            </section>
+            </section> --}}
         @endif
     </div>
+    <a href="/edicao-perfil/{{$professor->id}}">Clique para voltar para a página de edição do perfil
+        <i class="fas fa-edit"></i>
+    </a>
+    <br>
     <div class=título>
         Saiba mais sobre o seu Professor!
     </div>
     <div id="divPai">;
         <aside>
-            <a href="/edicao-perfil/{{$professor->id}}">Clique para voltar para a página de edição do perfil
-                <i class="fas fa-edit"></i>
-            </a>
             <h3>{{ $professor->nome }} {{ $professor->sobrenome }}</h3>
             <br>
 

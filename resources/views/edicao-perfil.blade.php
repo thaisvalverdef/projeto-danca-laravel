@@ -35,7 +35,7 @@
             <textarea class="form-control {{$errors->has('plataforma') ? ' is-invalid':''}}" id="plataforma" rows="3" name="plataforma" value="{{ $professor->plataforma }}" >{{ $professor->plataforma }}</textarea>
             <div class="invalid-feedback">{{ $errors->first('plataforma') }}</div>   
         </div>
-        
+        <br>
         <div class="form-group col-sm-6">
             <label for="modalidade">Altere sua modalidade</label>
             <div>
