@@ -30,7 +30,7 @@
     <header>
         <nav class="navbar text-primary navbar-expand-lg navbar-light"> 
 
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="{{ route('register') }}">
                 <img src="{{asset("img/logo_danca.png") }}" width="100" height="100">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -158,7 +158,6 @@
 
 
     </header>
-
 
     <main class="container-fluid px-0">
         @yield('content')
