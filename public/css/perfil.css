@@ -64,7 +64,6 @@ main {
 h3 {
     font-size: 35px;
     text-align: center;
-    font-family: 'Marck Script', cursive;
 }
 
 form {
@@ -77,9 +76,9 @@ form h5 {
     margin-left: 160px;
 }
 
-footer {
+/* footer {
     display: flex;
-}
+} */
 
 .btn,
 .nav-item:last-child {
@@ -100,11 +99,11 @@ footer {
     border-radius: .25rem;
 }
 
-.btn:hover,
+/* .btn:hover,
 .nav-item:last-child:hover {
     color: #fff;
 }
 
 .navbar {
     background-color: white;
-} 
+}  */

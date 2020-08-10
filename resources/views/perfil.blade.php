@@ -1,13 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    </header>
+    
     <div class=título>
         Saiba mais sobre o seu Professor!
     </div>
     <div id="divPai">;
         <aside>
-            <h3>Professor Fulano</h3>
+            <h3><label form="nome" action="/perfil/{{auth()->id}}">Nome</label>
+                <input type="text" name="nome" value="{{ $professor->nome }}" class="form-control {{$errors->has('nome') ? ' is-invalid':''}}" id="nome">
+                <div class="invalid-feedback">{{ $errors->first('nome') }}</div>       
+            </h3>
             <br>
 
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">

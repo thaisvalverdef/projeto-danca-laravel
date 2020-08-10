@@ -38,10 +38,15 @@
     color: #fff;
 }
 
-.navbar {
-        background-color: white;
-}
-
 #containerlista {
     max-width: 1350px;
+}
+
+.modalidades{
+    background-color: #f64d6b;
+    color: white;
+}
+
+main {
+    min-height: calc(100vh - 250px);
 }

@@ -1,20 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<header class="bg-danger text-white" class="modalidades">
+<header  class="modalidades" class="bg-danger text-white mt-5">
     <div class="container text-center">
       <h1>Ballet</h1>
       <p class="lead">Escolha a/o professor(a): pronto, comece a praticar!</p>
     </div>
   </header>
- 
+ <body>
+   <br>
+   <br>
+   <br>
   <div class="card-deck">
     <div class="card ml-5">
       <img class="card-img-top" src="{{asset("img/aula7.png") }}" alt="Imagem de capa do card">
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
         <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-        <a href="#" class="btn" class="saiba">Saiba mais</a>
+        <a href="perfil.blade.php" class="btn" class="saiba">Saiba mais</a>
 
       </div>
     </div>
@@ -23,7 +26,8 @@
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
         <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-        <a href="#" class="btn">Saiba mais</a>
+        <a href="perfil.blade.php" class="btn">Saiba mais</a>
+        
       </div>
     </div>
     <div class="card mr-5">
@@ -31,7 +35,7 @@
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
         <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
-        <a href="#" class="btn">Saiba mais</a>
+        <a href="perfil.blade.php" class="btn">Saiba mais</a>
       </div>
     </div>
   </div>
@@ -41,7 +45,7 @@
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
         <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-        <a href="#" class="btn btn-rigth">Saiba mais</a>
+        <a href="perfil.blade.php" class="btn btn-rigth">Saiba mais</a>
       </div>
     </div>
     <div class="card mt-5 mb-5">
@@ -49,7 +53,7 @@
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
         <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-        <a href="#" class="btn">Saiba mais</a>
+        <a href="perfil.blade.php" class="btn">Saiba mais</a>
       </div>
     </div>
     <div class="card mt-5 mb-5 mr-5">
@@ -57,10 +61,13 @@
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
         <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
-        <a href="#" class="btn">Saiba mais</a>
+        <a href="perfil.blade.php" class="btn">Saiba mais</a>
+        
+          
       </div>
     </div>
   </div>  
 </div>
-</div>   
+</div>  
+ </body> 
 @endsection

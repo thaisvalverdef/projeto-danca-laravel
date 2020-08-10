@@ -10,29 +10,37 @@
   </header>
 
 <div class="container" id="containeredicao">
+                {{-- falta arrumar todos os campos igual campo nome --}}
 
-    <form>
+    <form method="POST" action="/edicao-perfil/{{$professor->id}}" enctype="multipart/form-data">
+        @csrf
+        {{ method_field('PUT') }}
         <div class="form-group col-sm-9">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome">
+            <input type="text" name="nome" value="{{ $professor->nome }}" class="form-control {{$errors->has('nome') ? ' is-invalid':''}}" id="nome">
+            <div class="invalid-feedback">{{ $errors->first('nome') }}</div>       
         </div>
         <div class="form-group col-sm-9">
             <label for="nome">Sobrenome</label>
-            <input type="text" class="form-control" id="sobrenome">
+            <input type="text" name="sobrenome" value="{{ $professor->sobrenome }}" class="form-control {{$errors->has('sobrenome') ? ' is-invalid':''}}" id="sobrenome">
+            <div class="invalid-feedback">{{ $errors->first('sobrenome') }}</div>       
         </div>
         <div class="form-group col-sm-9">
             <label for="email">Endereço de email</label>
-            <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
+            <input type="text" name="email" value="{{ $professor->email }}" class="form-control {{$errors->has('email') ? ' is-invalid':''}}" id="email">
+            <div class="invalid-feedback">{{ $errors->first('email') }}</div>   
         </div>
         <br>
         <div class="form-group col-sm-9">
             <label for="apresentacao">Edite seu texto de apresentação</label>
-            <textarea class="form-control" id="apresentacao" rows="3"></textarea>
+            <textarea class="form-control {{$errors->has('apresentacao') ? ' is-invalid':''}}" id="apresentacao" rows="3" name="apresentacao" value="{{ $professor->apresentacao }}" >{{ $professor->apresentacao }}</textarea>
+            <div class="invalid-feedback">{{ $errors->first('apresentacao') }}</div>   
         </div>
         <br>
         <div class="form-group col-sm-9">
-            <label for="metodologia">Adicione ou exclua as suas metodologias de ensino</label>
-            <textarea class="form-control" id="metodologia" rows="3"></textarea>
+            <label for="plataforma">Adicione ou exclua as suas plataformas de ensino</label>
+            <textarea class="form-control {{$errors->has('plataforma') ? ' is-invalid':''}}" id="plataforma" rows="3" name="plataforma" value="{{ $professor->plataforma }}" >{{ $professor->plataforma }}</textarea>
+            <div class="invalid-feedback">{{ $errors->first('plataforma') }}</div>   
         </div>
         <br>
         <div class="form-group col-sm-6">
@@ -80,7 +88,8 @@
         </div>
         <div class="form-group col-sm-6">
             <label for="niveis">Altere o nível das suas aulas</label>
-            <select class="form-control" id="niveis">
+            <select class="form-control {{$errors->has('niveis') ? ' is-invalid':''}}" id="niveis" name="niveis" value="{{ $professor->niveis }}" >{{ $professor->niveis }}</textarea>
+                <div class="invalid-feedback">{{ $errors->first('niveis') }}</div>
                 <option>Iniciante</option>
                 <option>Intermediário</option>
                 <option>Avançado</option>

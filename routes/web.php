@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,10 +45,26 @@ Route::get('/lista-categorias', function () {
     return view('lista-categorias');
 });
 
+
+//Listando professores
+Route::get('/lista-usuario', 'ProfessorController@index');
+
+//Criando perfil
+Route::get('/cadastro', 'ProfessorController@add');
+Route::post('/cadastro', 'ProfessorController@create');
+Route::put('/cadastro', 'ProfessorController@carregarProfessor');
+
+//Alterando perfil
+Route::get('/edicao-perfil/{id}', 'ProfessorController@edit');
+Route::put('/edicao-perfil/{id}', 'ProfessorController@update');
+
+
+//Deletando perfil
+Route::delete('/professor/remove/{id}', 'ProfessorController@delete');
+
+//Pesquisando - filtro de busca
+Route::get('/professor/search', 'ProfessorController@search');
+
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
+Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
