@@ -31,7 +31,7 @@
         <nav class="navbar text-primary navbar-expand-lg navbar-light"> 
 
             <a class="navbar-brand" href="">
-                <img src="{{asset("img/logo_danca.png") }}" width="100" height="100">
+                <img src="{{asset("img/logo_danca.png") }}" width="100" height="100" href="/index">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -184,9 +184,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
-    <script> $('.modal .close').click(function(){
-        $('.modal').hide();
-        }) </script>
 </body>
 
 </html>

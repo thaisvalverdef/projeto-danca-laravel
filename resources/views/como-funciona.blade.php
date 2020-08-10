@@ -2,8 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="col-12">
-    <img class="card-img" src="{{asset("img/banner-danca.png") }}" alt="Imagem do card">
+    <img class="card-img w-100" src="{{asset("img/banner-danca.png") }}" alt="Imagem do card">
     </div>
     <br>
         <hr>

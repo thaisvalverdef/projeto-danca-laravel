@@ -27,7 +27,7 @@
             <h3>{{ $professor->nome }}</h3>
             <br>
 
-            <img src="{{ $professor->imagem != null ? asset($professor->imagem) : asset('img/null.png') }}" alt="">
+            <img src="{{ $professor->imagem != null ? asset($professor->imagem) : asset('img/null.png') }}" width="485" height="215" alt="">
 
             {{-- <div id="carouselExampleCaptions" class="carousel slide"
                 data-ride="carousel">

@@ -12,7 +12,7 @@
    <br>
    <br>
   <div class="card-deck">
-    <div class="card ml-5">
+    <div class="card flex-box">
       <img class="card-img-top" src="{{asset("img/aula7.png") }}" alt="Imagem de capa do card">
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
@@ -29,7 +29,7 @@
         <a href="#" class="btn">Saiba mais</a>
       </div>
     </div>
-    <div class="card mr-5">
+    <div class="card flex-box">
       <img class="card-img-top" src="{{asset("img/ballet1.jpg") }}" alt="Imagem de capa do card">
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
@@ -39,7 +39,7 @@
     </div>
   </div>
   <div class="card-deck">
-    <div class="card mt-5 mb-5 ml-5">
+    <div class="card flex-box">
       <img class="card-img-top" src="{{asset("img/ballet.jpg") }}" alt="Imagem de capa do card">
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
@@ -47,7 +47,7 @@
         <a href="#" class="btn btn-rigth">Saiba mais</a>
       </div>
     </div>
-    <div class="card mt-5 mb-5">
+    <div class="card flex-box">
       <img class="card-img-top" src="{{asset("img/ballet (1).jpg") }}" alt="Imagem de capa do card">
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
@@ -55,7 +55,7 @@
         <a href="#" class="btn">Saiba mais</a>
       </div>
     </div>
-    <div class="card mt-5 mb-5 mr-5">
+    <div class="card flex-box">
       <img class="card-img-top" src="{{asset("img/ballet (3).jpg") }}" alt="Imagem de capa do card">
       <div class="card-body">
         <h5 class="card-title">Título do card</h5>
