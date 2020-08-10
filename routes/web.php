@@ -49,6 +49,10 @@ Route::get('/lista-categorias', function () {
     return view('lista-categorias');
 });
 
+Route::get('/perfil-publico', function () {
+    return view('perfil-publico');
+});
+
 
 //Listando professores
 Route::get('/lista-usuario', 'ProfessorController@index');
@@ -77,3 +81,8 @@ Route::get('/professor/search', 'ProfessorController@search');
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Enviar e-mail
+
+Route::get('/perfil-publico', 'PerfilEmailController@create');
+Route::post('/perfil-publico', 'PerfilEmailController@store');
