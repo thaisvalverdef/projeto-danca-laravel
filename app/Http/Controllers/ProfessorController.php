@@ -182,7 +182,7 @@ class ProfessorController extends Controller
             
 
             // obtendo todos registros da tabela professor
-            $prof = Professor::all();
+            $professor = Professor::all();
 
             return view('lista-usuario')->with([
                 'professor' => $professor,
