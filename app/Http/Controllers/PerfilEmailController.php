@@ -21,5 +21,7 @@ class PerfilEmailController extends Controller
         ]);
 
         Mail::to('test@test.com')->send(new ContactFormMail($emaildata));
+
+        return redirect('perfil-publico');
     }
 }
