@@ -82,7 +82,7 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="logout" class="nav-item">
                         <a href="{{ route('logout') }}">Logout</a>
                     </li>
                     @endguest

@@ -53,3 +53,7 @@ main {
 
 body { overflow-x: hidden; }
 
+.logout{
+    padding: 8px;
+}
+}
