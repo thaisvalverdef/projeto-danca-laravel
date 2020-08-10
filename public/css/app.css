@@ -67,6 +67,11 @@ section {
   display: block;
 }
 
+.nav-item.dropdown:hover .dropdown-menu{
+  display: block;
+  }
+
+
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
