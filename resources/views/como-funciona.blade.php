@@ -43,7 +43,7 @@
                 <p>Em seu perfil, alunos de todos os lugares do Brasil e do mundo vão poder entrar em contato
                     diretamente com você!
                     <br>
-                    <a href="cadastro.php" class="btn">Eu quero cadastrar!</a></p>
+                    <a href="/register" class="btn">Eu quero me cadastrar!</a></p>
         </div>
         <div class="col-lg-6 order-lg-first pb-5">
             <img class="img-fluid rounded mx-auto" src="{{asset("img/cadastre-se.png") }}" alt="">
