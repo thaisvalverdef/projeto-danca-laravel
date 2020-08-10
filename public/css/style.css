@@ -50,3 +50,6 @@
 main {
     min-height: calc(100vh - 250px);
 }
+
+body { overflow-x: hidden; }
+

@@ -25,8 +25,8 @@
   </div>
 
     <h2 class="col-12 text-center text info mt-5 mb-5">Aulas da semana</h2>
-    <div class="card-deck">
-      <div class="card ml-5">
+    <div class="card-deck flex-box">
+      <div class="card">
         <img class="card-img-top" src="{{asset("img/aula1.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
           <h5 class="card-title">Título do card</h5>
@@ -35,7 +35,7 @@
   
         </div>
       </div>
-      <div class="card">
+      <div class="card flex-box">
         <img class="card-img-top" src="{{asset("img/aula5.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
           <h5 class="card-title">Título do card</h5>
@@ -43,7 +43,7 @@
           <a href="#" class="btn">Saiba mais</a>
         </div>
       </div>
-      <div class="card mr-5">
+      <div class="card flex-box">
         <img class="card-img-top" src="{{asset("img/aula7.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
           <h5 class="card-title">Título do card</h5>
@@ -53,7 +53,7 @@
       </div>
     </div>
     <div class="card-deck">
-      <div class="card mt-5 mb-5 ml-5">
+      <div class="card flex-box">
         <img class="card-img-top" src="{{asset("img/aula4.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
           <h5 class="card-title">Título do card</h5>
@@ -61,7 +61,7 @@
           <a href="#" class="btn btn-rigth">Saiba mais</a>
         </div>
       </div>
-      <div class="card mt-5 mb-5">
+      <div class="card flex-box">
         <img class="card-img-top" src="{{asset("img/aula8.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
           <h5 class="card-title">Título do card</h5>
@@ -69,7 +69,7 @@
           <a href="#" class="btn">Saiba mais</a>
         </div>
       </div>
-      <div class="card mt-5 mb-5 mr-5">
+      <div class="card flex-box">
         <img class="card-img-top" src="{{asset("img/aula6.png") }}" alt="Imagem de capa do card">
         <div class="card-body">
           <h5 class="card-title">Título do card</h5>

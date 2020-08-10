@@ -2,7 +2,7 @@
 
 @section('content')
 
-<header class="bg-danger text-white">
+<header class="modalidades" class="bg-danger text-white mt-5">
     <div class="container text-center">
       <h3>Página da edição do perfil</h3>
       <p class="lead"> </p>
